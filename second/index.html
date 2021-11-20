@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test quiz second</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+<form id="add" action="/add" method="POST">
+    <input type="text" name="firstname">
+    <input type="text" name="lastname">
+    <input type="email" name="email">
+</form>
+
+<a href="#" class="add">Добавить</a>
+<a href="#" class="add" onclick='send_form("add")'>Добавить</a>
+
+<script>
+    function send_form(form_id) {
+        // или засуну это все в .click скрипт, что ниже
+        var form = $('#' + form_id);
+        var msg = form.serialize();
+        $.ajax({
+            type: 'POST',
+            url: '../handlers/hSentEmailCall.php', // Обработчик собственно
+            data: msg,
+            success: function (data) {
+                // запустится при успешном выполнении запроса и в data будет ответ скрипта
+            },
+            error: function () {
+                alert('Ошибка!');
+            }
+        });
+
+
+    }
+</script>
+
+<form id="add_2" action="/add" method="POST">
+    <input type="text" name="firstname">
+    <input type="text" name="lastname">
+    <input type="email" name="email">
+    <input type="submit" id="sendButton" style="display: none;"/>
+</form>
+
+<script>
+    $(".add_2").click(function (e) {
+        // хз зачем пока оставим
+        e.preventDefault();
+        $("#sendButton").click();
+    });
+</script>
+
+
+</body>
+</html>

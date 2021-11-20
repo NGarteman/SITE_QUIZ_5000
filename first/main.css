@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+#form-output {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+#form-output form {
+    position: absolute;
+    display: flex;
+    height: 175px;
+}
+
+#form-output form div {
+    flex: 1 0 200px;
+    text-align: center;
+}
+
+#form-output form input,
+#form-output form select {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+#control-panel {
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    border-top: 1px solid #999;
+}
+
+#control-panel button:last-child {
+    float: right;
+}

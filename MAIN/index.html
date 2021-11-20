@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <!--    <SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></SCRIPT>-->
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+    <title>Страница</title>
+</head>
+<body>
+<form method="post" action="send.php">
+    <div class="step">
+        <p class="step">Шаг 1</p>
+        <p><strong>свободное время:</strong><input type="text" name="free_time" placeholder="Введите логин"></p>
+        <p><strong>зарплата:</strong><input type="text" name="salary" placeholder="Введите e-mail"></p>
+        <p><strong>Пароль:</strong><input type="password" name="passw" placeholder="Введите пароль"></p>
+    </div>
+    <div class="step">
+        <p class="step">Шаг 2</p>
+        <p><strong>Имя:</strong><input type="text" name="name" placeholder="Введите имя"></p>
+        <p><strong>телефон:</strong><input type="text" name="phone" placeholder="Введите фамилию"></p>
+        <p><strong>Возраст:</strong><input type="text" name="age" placeholder="Введите возраст"></p>
+    </div>
+    <div class="step">
+        <p class="step">Шаг 3</p>
+        <p><strong>Страна:</strong><input type="text" name="country" placeholder="Введите страну проживания"></p>
+        <p><strong>Город:</strong><input type="text" name="city" placeholder="Введите город проживания"></p>
+        <p><strong>Улица:</strong><input type="text" name="street" placeholder="Введите вашу улицу"></p>
+    </div>
+    <p class="talign">
+        <a href="#" class="back">Назад</a>
+        <a href="#" class="next">Следующий шаг</a>
+        <input type="submit" value="Зарегистрироваться">
+    </p>
+</form>
+</body>
+</html>
